@@ -8,7 +8,7 @@ tags:
   - money
 ---
 
-Popular programming languages do not natively support decimal numbers. This is because CPUs operate on binary numbers. Even though there is a new IEEE standard for decimal floating point types, CPUs still don’t support it fully. So every time we see a notation like `0.1` in the code, it’s not what it seems. Our calculations might be inaccurate.
+Popular programming languages do not natively support decimal numbers. This is because CPUs operate on binary numbers. Even though there is a new IEEE standard for decimal floating point types, CPUs still don’t support it fully. So every time we see a notation like `0.1` in the code, it’s not what it seems. **Our calculations might be inaccurate.**
 
 Most modern languages have dedicated libraries to handle decimals. Internally, they use either a long integer type or a string to store the number. They implement their own arithmetic engines. In Java, there is a `BigDecimal` class.
 
@@ -20,7 +20,7 @@ final BigDecimal number = new BigDecimal("123.45");
 
 > To save memory, special `BigDecimal` instances already exist: `BigDecimal.ZERO`, `BigDecimal.ONE` and `BigDecimal.TEN`. You should reuse them instead of creating your own.
 
-It is not recommended to use the `double` type when creating a `BigDecimal` object. Even if we enter a value like `0.1`, the actual representation equals to something around 0.10000000000000000555 which definitely does not look like a monetary amount or anything else that we would expect. This is because `double` is a base-2 scientific notation type. Try running this code to see it for yourself:
+**It is not recommended to use the `double` type** when creating a `BigDecimal` object. Even if we enter a value like `0.1`, the actual representation equals to something around 0.10000000000000000555 which definitely does not look like a monetary amount or anything else that we would expect. This is because `double` is a base-2 scientific notation type. Try running this code to see it for yourself:
 
 ```java
 System.out.println(0.20 + 0.10);
