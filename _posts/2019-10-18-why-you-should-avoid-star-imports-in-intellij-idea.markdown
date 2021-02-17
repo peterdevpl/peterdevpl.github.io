@@ -26,7 +26,7 @@ At my team, we decided to turn that behavior off. Why and how?
 
 **IntelliJ does not have a way to turn off star imports, but it has a threshold option. So everyone in the team set a ridiculously high threshold (like 500).**
 
-**Another problem is folding imports by default.** I believe that the imports section is actually a very important piece of code and it should not be folded. We need to be aware of what’s going on there, so we jumped into `Settings` | `Editor` | `General` | `Code Folding` and turned `Imports` off.
+**Another problem is folding imports by default.** I believe that the imports section is actually a very important piece of code and it should not be folded. We need to be aware of what’s going on there, so we jumped into `Settings` > `Editor` > `General` > `Code Folding` and turned `Imports` off.
 
 ## Further reading
 
