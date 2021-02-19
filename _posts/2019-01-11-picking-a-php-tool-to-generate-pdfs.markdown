@@ -5,6 +5,7 @@ date:   2019-01-11 17:00:00 +0100
 last_modified_at: 2021-01-10 17:00:00 +0100
 description: "Comparison of HTML to PDF conversion tools: mPDF, TCPDF, Dompdf, wkhtmltopdf and Headless Chrome."
 excerpt: I spent a lot of time working with different tools to generate PDF files, mainly invoices and reports. Some of these documents were really sophisticated, including multi-page tables, colorful charts, headers and footers. I tried generating documents by hand and converting HTML to PDF, or even LaTeX to PDF.
+image: /assets/generating_pdf_files.jpg
 permalink: /2019/01/11/picking-a-php-tool-to-generate-pdfs/
 tags:
   - pdf
@@ -45,10 +46,24 @@ Rendering HTML and CSS certainly isn’t easy, so you cannot expect these librar
 
 To give you some idea of what to expect from above libraries, I compiled **a comparison of an invoice renderings**. These three pictures are made from the same HTML 5 source which utilizes CSS Flexbox to position “Seller” and “Buyer” sections next to each other. It has also some table formatting:
 
-Google Chrome (reference image)
-TCPDF 6.3.5
-mPDF 8.0.10
-Dompdf 1.0.2
+<div class="pdf-screenshots">
+  <figure class="image">
+    <img src="/assets/invoice-chrome.png">
+    <figcaption>Google Chrome (reference image)</figcaption>
+  </figure>
+  <figure class="image">
+    <img src="/assets/invoice-tcpdf.png">
+    <figcaption>TCPDF 6.3.5</figcaption>
+  </figure>
+  <figure class="image">
+    <img src="/assets/invoice-mpdf.png">
+    <figcaption>mPDF 8.0.10</figcaption>
+  </figure>
+  <figure class="image">
+    <img src="/assets/invoice-dompdf.png">
+    <figcaption>Dompdf 1.0.2</figcaption>
+  </figure>
+</div>
 
 As you can see, **none of the PHP libraries understood CSS Flexbox**. mPDF and TCPDF had some problems with painting the table. **Dompdf performed the best** and I’m pretty sure that making the “Seller” and “Buyer” sections the old-school way, like `float` or `<table>` would be enough to have a proper result.
 

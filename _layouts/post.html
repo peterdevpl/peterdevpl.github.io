@@ -4,6 +4,9 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
+    {%- if page.image -%}
+      <img src="{{ page.image }}" width="740" height="340" alt="Featured illustrative image" class="featured-image">
+    {%- endif -%}
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
       {%- if page.last_modified_at -%}

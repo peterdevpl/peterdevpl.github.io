@@ -1,0 +1,24 @@
+figure {
+  text-align: center;
+}
+
+figcaption {
+  color: $grey-color;
+}
+
+.pdf-screenshots {
+  display: flex;
+  flex-wrap: wrap;
+
+  figure {
+    width: 50%;
+  }
+
+  img {
+    border: solid $grey-color-light 1px;
+  }
+}
+
+.featured-image {
+  margin-bottom: 1ex;
+}

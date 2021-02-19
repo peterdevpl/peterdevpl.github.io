@@ -3,6 +3,7 @@ layout: post
 title:  "Mixing office and remote workers in one organization"
 date:   2019-03-08 17:00:00 +0100
 description: A short guide to setting up proper communication between people working in the office and working remotely.
+image: /assets/people_working_pexels_com.jpg
 permalink: /2019/03/08/mixing-office-and-remote-workers-in-one-organization/
 tags:
   - hr
@@ -28,6 +29,11 @@ At some point, my organization forced everyone to set their photos as profile pi
 We often have calls where one group of people is sitting at the office and another group is connecting remotely. The biggest challenge is to create equal participation opportunities for everyone in the team.
 
 Both office and remote people must have a good connection and a good microphone, so everyone can understand what other people are saying. Remote folks usually have headsets; please check their sound quality upfront! If they sound like an old telephone, buy something better.
+
+<figure class="image">
+  <img src="/assets/remote_and_office_call_improved.png">
+  <figcaption>The best table setup for a call with remote people. Every person maintains the same distance from a microphone. A webcam captures everyone at the table, so that remote participants see exactly what’s happening.</figcaption>
+</figure>
 
 The office group can have a shared microphone on the table. You can find some good products with an omnidirectional mic and an integrated speaker for around $100. Quality matters even more because people are going to sit in some distance from the microphone, so remote guys will hear more room reflections. Sit around the microphone in an equal distance, so everyone can be heard equally loud.
 

@@ -3,6 +3,7 @@ layout: post
 title:  "Offboarding: How to quit the job gracefully"
 date:   2019-02-22 17:00:00 +0100
 description: The way people quit a job tells a lot about their social skills and responsibility. Let's see how a development team can prepare for people leaving the place.
+image: /assets/people_working_at_night_pexels_com.jpg
 permalink: /2019/02/22/offboarding-with-grace/
 tags:
   - hr
