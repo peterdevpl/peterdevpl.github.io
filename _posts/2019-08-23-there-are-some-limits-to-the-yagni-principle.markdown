@@ -2,6 +2,7 @@
 layout: post
 title:  "There are some limits to the YAGNI principle"
 date:   2019-08-23 17:00:00 +0100
+description: The biggest challenge for me has been always dealing with complex business logic in IT systems. You need good tools to model and test that logic.
 permalink: /2019/08/23/there-are-some-limits-to-the-yagni-principle/
 tags:
   - management

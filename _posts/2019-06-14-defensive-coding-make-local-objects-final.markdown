@@ -3,6 +3,7 @@ layout: post
 title:  "Defensive coding: Make local objects final"
 date:   2019-06-14 17:00:00 +0100
 permalink: /2019/06/14/defensive-coding-make-local-objects-final/
+description: Using final Java keyword to avoid unwanted mutations which could cause bugs
 tags:
   - defensive coding
   - java

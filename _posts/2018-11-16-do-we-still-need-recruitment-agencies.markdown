@@ -2,6 +2,7 @@
 layout: post
 title:  "Do we still need recruitment agencies?"
 date:   2018-11-16 17:00:00 +0100
+description: A rant on recruitment agencies doing a bad job. Things to watch for when you are outsourcing your recruitment process.
 permalink: /2018/11/16/do-we-still-need-recruitment-agencies/
 tags:
   - hr

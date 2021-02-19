@@ -2,6 +2,7 @@
 layout: post
 title:  "How legacy code is made – part 2"
 date:   2018-07-27 17:00:00 +0100
+description: Don't fall into a trap of quick workarounds! Here's my story about a nasty hack which caused more problems than it solved.
 permalink: /2018/07/27/how-legacy-code-is-made-part-2/
 tags:
   - legacy

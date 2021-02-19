@@ -2,6 +2,7 @@
 layout: post
 title:  "6 Steps to Effective Developer’s Onboarding"
 date:   2019-02-08 17:00:00 +0100
+description: Read how a software developers' team should onboard people to increase performance. Thoughts on preparing the onboarding process, SMART goals and mentoring.
 permalink: /2019/02/08/6-steps-to-effective-developers-onboarding/
 tags:
   - hr

@@ -2,6 +2,7 @@
 layout: post
 title:  "Is Portable Document Format obsolete?"
 date:   2019-09-06 17:00:00 +0100
+description: In the age of responsive web design, PDFs are still very common. When is it a proper format for your data?
 permalink: /2019/09/06/is-portable-document-format-obsolete/
 tags:
   - html

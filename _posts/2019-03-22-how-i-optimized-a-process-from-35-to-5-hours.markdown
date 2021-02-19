@@ -2,6 +2,7 @@
 layout: post
 title:  "How I optimized a process from 35 to 5 hours"
 date:   2019-03-22 17:00:00 +0100
+description: How to achieve spectular success as a software engineer by performing little steps, every day. My experience with optimizing sophisticated IT systems.
 permalink: /2019/03/22/how-i-optimized-a-process-from-35-to-5-hours/
 tags:
   - optimization

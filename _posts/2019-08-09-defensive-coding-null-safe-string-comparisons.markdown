@@ -3,6 +3,7 @@ layout: post
 title:  "Defensive coding: Null-safe string comparisons"
 date:   2019-08-09 17:00:00 +0100
 permalink: /2019/08/09/defensive-coding-null-safe-string-comparisons/
+description: Avoiding Null Pointer Exception during string comparison in Java
 tags:
   - defensive coding
   - java

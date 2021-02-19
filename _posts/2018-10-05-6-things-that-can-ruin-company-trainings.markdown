@@ -2,6 +2,7 @@
 layout: post
 title:  "6 Things That Can Ruin Corporate Trainings"
 date:   2018-10-05 17:00:00 +0100
+description: My experience with software development and management trainings. Six advices for you as a teacher to conduct better training/coaching sessions.
 permalink: /2018/10/05/6-things-that-can-ruin-company-trainings/
 tags:
   - hr

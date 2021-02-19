@@ -2,6 +2,7 @@
 layout: post
 title:  "Defensive coding: Final properties and proper autowiring in Spring"
 date:   2019-05-31 17:00:00 +0100
+description: Getting rid of the "Field injection is not recommended" warning.
 permalink: /2019/05/31/defensive-coding-final-properties-and-proper-autowiring-in-spring/
 tags:
   - defensive coding

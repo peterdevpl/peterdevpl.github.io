@@ -3,6 +3,7 @@ layout: post
 title:  "Using your own currency in MoneyPHP"
 date:   2020-01-17 17:00:00 +0100
 permalink: /2020/01/17/using-your-own-currency-in-moneyphp/
+description: Create custom (non-ISO) currencies with MoneyPHP, convert them and format output.
 tags:
   - php
   - money

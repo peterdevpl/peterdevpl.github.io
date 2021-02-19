@@ -2,6 +2,7 @@
 layout: post
 title:  "How unit tests help changing existing code"
 date:   2018-08-10 17:00:00 +0100
+description: A short history about PHP unit tests which allowed me to easily change an unknown business logic code.
 permalink: /2018/08/10/how-unit-tests-help-changing-existing-code/
 tags:
   - php

@@ -2,6 +2,7 @@
 layout: post
 title:  "Why I didn’t end up being a database engineer"
 date:   2019-09-20 17:00:00 +0100
+description: A story about why you shouldn't put all the business logic in a SQL database.
 permalink: /2019/09/20/why-i-didnt-end-up-being-a-database-engineer/
 tags:
   - domain-driven design

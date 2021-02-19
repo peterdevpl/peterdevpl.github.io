@@ -3,6 +3,7 @@ layout: post
 title:  "All you need to know about Java’s BigDecimal"
 date:   2021-02-11 17:00:00 +0100
 permalink: /2021/02/11/all-you-need-to-know-about-javas-bigdecimal/
+description: A guide to Java BigDecimal class. Examples of monetary calculations and formatting decimal numbers for different languages.
 tags:
   - java
   - money

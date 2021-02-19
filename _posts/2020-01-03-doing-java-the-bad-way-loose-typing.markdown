@@ -3,6 +3,7 @@ layout: post
 title:  "Doing Java the bad way: loose typing"
 date:   2020-01-03 17:00:00 +0100
 permalink: /2020/01/03/doing-java-the-bad-way-loose-typing/
+description: Overusing HashMaps in Java web applications is an antipattern that makes Java work like PHP - in a bad way.
 tags:
   - clean code
   - java

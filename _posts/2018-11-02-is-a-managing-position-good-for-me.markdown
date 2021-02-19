@@ -2,6 +2,7 @@
 layout: post
 title:  "Is a managing position good for me?"
 date:   2018-11-02 17:00:00 +0100
+description: Are you a software engineer considering a managing position? This guide is for you.
 permalink: /2018/11/02/is-a-managing-position-good-for-me/
 tags:
   - hr

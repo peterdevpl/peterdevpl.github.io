@@ -3,6 +3,7 @@ layout: post
 title:  "Sending monetary amounts over network"
 date:   2020-11-22 17:00:00 +0100
 permalink: /2020/11/22/sending-monetary-amounts-over-network/
+description: Quick guide on avoiding common problems when sending monetary amounts through an API, SQL or CSV. How to handle money without bugs?
 tags:
   - java money
   - money

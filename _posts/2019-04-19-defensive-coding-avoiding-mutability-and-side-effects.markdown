@@ -2,6 +2,7 @@
 layout: post
 title:  "Defensive coding: Avoiding mutability and side effects"
 date:   2019-04-19 17:00:00 +0100
+description: How many variables are there in your code? How many of them are not used anymore? How many of them have misleading names? Here's a handy guide on avoiding bugs.
 permalink: /2019/04/19/defensive-coding-avoiding-mutability-and-side-effects/
 tags:
   - defensive coding

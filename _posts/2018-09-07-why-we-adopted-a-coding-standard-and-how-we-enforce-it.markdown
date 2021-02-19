@@ -2,6 +2,7 @@
 layout: post
 title:  "Why we adopted a coding standard and how we enforce it"
 date:   2018-09-07 17:00:00 +0100
+description: PSR-2 and PSR-4 standards provided great help unifying the PHP coding style in my teams. We enforce them with Continuous Integration and static code analysis.
 permalink: /2018/09/07/why-we-adopted-a-coding-standard-and-how-we-enforce-it/
 tags:
   - continuous integration

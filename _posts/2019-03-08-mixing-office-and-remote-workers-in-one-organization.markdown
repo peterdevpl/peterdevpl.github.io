@@ -2,6 +2,7 @@
 layout: post
 title:  "Mixing office and remote workers in one organization"
 date:   2019-03-08 17:00:00 +0100
+description: A short guide to setting up proper communication between people working in the office and working remotely.
 permalink: /2019/03/08/mixing-office-and-remote-workers-in-one-organization/
 tags:
   - hr

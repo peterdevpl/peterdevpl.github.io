@@ -3,6 +3,7 @@ layout: post
 title:  "PHP: How to take a screenshot of a PDF page"
 date:   2021-01-28 17:00:00 +0100
 permalink: /2021/01/28/php-how-to-take-a-screenshot-of-a-pdf-page/
+description: A guide on converting PDF files to PNG and JPEG using ImageMagick, GhostScript, Poppler or Inkscape. Choose the best solution for you!
 tags:
   - php
   - pdf

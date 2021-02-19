@@ -2,6 +2,7 @@
 layout: post
 title:  "Learn how to count money… or you will lose it"
 date:   2018-08-24 17:00:00 +0100
+description: An example on how floating point numbers are stored using IEEE-754 and what bugs can you encounter. How to store monetary values using PHP and MoneyPHP?
 permalink: /2018/08/24/learn-how-to-count-money-or-you-will-lose-it/
 tags:
   - money

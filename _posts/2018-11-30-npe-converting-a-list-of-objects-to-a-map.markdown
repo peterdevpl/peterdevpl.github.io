@@ -2,6 +2,7 @@
 layout: post
 title:  "NPE: Converting a list of objects to a map"
 date:   2018-11-30 17:00:00 +0100
+description: How to avoid a Null Pointer Exception in Java while converting a list of objects to a map.
 permalink: /2018/11/30/npe-converting-a-list-of-objects-to-a-map/
 tags:
   - java

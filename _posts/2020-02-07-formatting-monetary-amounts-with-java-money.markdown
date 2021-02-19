@@ -3,6 +3,7 @@ layout: post
 title:  "Formatting monetary amounts with Java Money"
 date:   2020-02-07 17:00:00 +0100
 permalink: /2020/02/07/formatting-monetary-amounts-with-java-money/
+description: Code snippets for monetary amount formatting using Moneta - Java Money JSR-354 implementation. Examples for different locales.
 tags:
   - java money
   - java

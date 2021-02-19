@@ -2,6 +2,7 @@
 layout: post
 title:  "Why you should disable wildcard imports in IntelliJ IDEA"
 date:   2019-10-18 17:00:00 +0100
+description: The default behavior of IntelliJ IDEA is to replace multiple class imports from a package with an asterisk. At my team, we decided to avoid that behavior. Why?
 permalink: /2019/10/18/why-you-should-avoid-star-imports-in-intellij-idea/
 tags:
   - clean code

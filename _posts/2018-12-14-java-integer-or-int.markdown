@@ -2,6 +2,7 @@
 layout: post
 title:  "Java: Integer or int?"
 date:   2018-12-14 17:00:00 +0100
+description: "The difference between Java's Integer and int types explained: objects versus primitive types, handling NULLs."
 permalink: /2018/12/14/java-integer-or-int/
 tags:
   - java

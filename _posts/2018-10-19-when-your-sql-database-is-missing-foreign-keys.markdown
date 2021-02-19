@@ -2,6 +2,7 @@
 layout: post
 title:  "When your SQL database is missing foreign keys"
 date:   2018-10-19 17:00:00 +0100
+description: A guide to introducing foreign key constraints in an existing SQL database. You will learn how to fix erroneous data which does not apply to the constraints.
 permalink: /2018/10/19/when-your-sql-database-is-missing-foreign-keys/
 tags:
   - database

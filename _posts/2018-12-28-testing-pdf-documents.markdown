@@ -2,6 +2,7 @@
 layout: post
 title:  "Testing PDF documents"
 date:   2018-12-28 17:00:00 +0100
+description: An example of parsing PDF document contents and testing it with Java, JUnit and PDFBox.
 permalink: /2018/12/28/testing-pdf-documents/
 tags:
   - java

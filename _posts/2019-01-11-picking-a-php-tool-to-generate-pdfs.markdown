@@ -2,6 +2,7 @@
 layout: post
 title:  "Picking a PHP tool to generate PDFs (2021 update)"
 date:   2019-01-11 17:00:00 +0100
+description: "Comparison of HTML to PDF conversion tools: mPDF, TCPDF, Dompdf, wkhtmltopdf and Headless Chrome."
 permalink: /2019/01/11/picking-a-php-tool-to-generate-pdfs/
 tags:
   - pdf
