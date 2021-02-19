@@ -3,6 +3,7 @@ layout: post
 title:  "How a legacy code is made"
 date:   2018-07-13 17:00:00 +0100
 description: An essay about struggling with a legacy code, splitting the codebase into layers using hexagonal architecture and Domain-Driven Design.
+excerpt: I received an apparently easy task to do. It should take maybe 15 minutes. Or maybe I should not even do it at all. Salespeople should have a reporting feature for that. However, it turned out that a mechanism to fetch products with prices was strictly tangled with the way these items were presented in the shop.
 permalink: /2018/07/13/how-a-legacy-code-is-made/
 tags:
   - architecture

@@ -3,6 +3,7 @@ layout: post
 title:  "Learn how to count money… or you will lose it"
 date:   2018-08-24 17:00:00 +0100
 description: An example on how floating point numbers are stored using IEEE-754 and what bugs can you encounter. How to store monetary values using PHP and MoneyPHP?
+excerpt: "It sounds weird when I get a ticket like this: when I set the price to $4.20 everything’s fine; but I cannot set the price to $4.10 because the system shows $4.09. I did some research and discovered that a user entered the price in dollars and then we converted it to cents to store in the database as an integer. That’s where the mistake was made."
 permalink: /2018/08/24/learn-how-to-count-money-or-you-will-lose-it/
 tags:
   - money

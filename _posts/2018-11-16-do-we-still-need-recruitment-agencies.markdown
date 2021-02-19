@@ -3,6 +3,7 @@ layout: post
 title:  "Do we still need recruitment agencies?"
 date:   2018-11-16 17:00:00 +0100
 description: A rant on recruitment agencies doing a bad job. Things to watch for when you are outsourcing your recruitment process.
+excerpt: As a candidate looking for jobs, I’ve never cooperated with any recruitment agencies. But as a senior developer responsible for tech interviews, I was forced to work with some HR companies and I had some really weird situations because of that.
 permalink: /2018/11/16/do-we-still-need-recruitment-agencies/
 tags:
   - hr

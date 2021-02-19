@@ -3,6 +3,7 @@ layout: post
 title:  "Defensive coding: Final properties and proper autowiring in Spring"
 date:   2019-05-31 17:00:00 +0100
 description: Getting rid of the "Field injection is not recommended" warning.
+excerpt: Dependencies should not be mutable. When using @Autowired on properties, you cannot use final because your compiler will complain that the objects are not initialized. The compiler doesn’t know the Spring magic behind instantation of these objects. This means that someone can accidentally overwrite the property.
 permalink: /2019/05/31/defensive-coding-final-properties-and-proper-autowiring-in-spring/
 tags:
   - defensive coding
