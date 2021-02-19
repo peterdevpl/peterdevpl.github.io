@@ -18,8 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+name: Piotr Horzycki
 title: Piotr Horzycki - Java and PHP developer's blog
-email: your-email@example.com
+email:
 description: >- # this means to ignore newlines until "baseurl:"
   Software engineer since 2008. Experienced with complex systems for payments, media, advertising and education.
   Been a scrum master and a team leader. I love fintech, data processing and SQL optimization. Sometimes I talk at meetups.
@@ -27,12 +28,35 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://peterdev.pl" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: peterdevpl
 github_username:  peterdevpl
+linkedin_username: piotr-horzycki
+facebook_username: piotr.horzycki
+show_excerpts: true
+
+social:
+  name: Piotr Horzycki
+  links:
+    - https://www.facebook.com/piotr.horzycki
+    - https://www.linkedin.com/in/piotr-horzycki/
+    - https://github.com/peterdevpl
+    - https://twitter.com/peterdevpl
+
+feed:
+  path: /feed/index.xml
 
 # Build settings
 theme: minima
 plugins:
+  - jekyll-archives
   - jekyll-feed
   - jekyll-seo-tag
+
+jekyll-archives:
+  enabled:
+    - tags
+  layouts:
+    tag: tag
+  permalinks:
+    tag: '/tag/:name/'
 
 # Exclude from processing.
 # The following items will not be processed, by default.
