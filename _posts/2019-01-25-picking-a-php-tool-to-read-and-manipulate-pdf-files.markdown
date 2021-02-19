@@ -2,14 +2,13 @@
 layout: post
 title:  "Picking a PHP tool to read and manipulate PDF files"
 date:   2019-01-25 17:00:00 +0100
+last_modified_at: 2020-01-18 17:00:00 +0100
 description: Extracting text and metadata from PDF, editing PDF files, adding stamps, extracting images, making screenshots. Updated for 2020.
 permalink: /2019/01/25/picking-a-php-tool-to-read-and-manipulate-pdf-files/
 tags:
   - pdf
   - php
 ---
-
-*Last updated: January 18th, 2020*
 
 > TL;DR For simple PDF text and metadata extraction, use [pdfparser](https://github.com/smalot/pdfparser). For advanced options, try [pdftotext](http://manpages.ubuntu.com/manpages/bionic/man1/pdftotext.1.html) and [pdfinfo](http://manpages.ubuntu.com/manpages/bionic/en/man1/pdfinfo.1.html) from [Poppler](https://poppler.freedesktop.org/). To join or split PDF files, encrypt them or apply watermarks, use [pdftk](https://www.pdflabs.com/docs/pdftk-man-page/). To make a JPEG or PNG screenshot of a PDF, use [ImageMagick](http://www.imagemagick.org/discourse-server/viewtopic.php?t=31313) or [pdftocairo](http://manpages.ubuntu.com/manpages/bionic/en/man1/pdftocairo.1.html).
 

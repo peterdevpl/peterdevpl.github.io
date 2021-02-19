@@ -2,14 +2,13 @@
 layout: post
 title:  "Picking a PHP tool to generate PDFs (2021 update)"
 date:   2019-01-11 17:00:00 +0100
+last_modified_at: 2021-01-10 17:00:00 +0100
 description: "Comparison of HTML to PDF conversion tools: mPDF, TCPDF, Dompdf, wkhtmltopdf and Headless Chrome."
 permalink: /2019/01/11/picking-a-php-tool-to-generate-pdfs/
 tags:
   - pdf
   - php
 ---
-
-*Last updated: January 10th, 2021*
 
 > TL;DR For HTML to PDF conversion, use [Dompdf](https://github.com/dompdf/dompdf) library if you don’t need CSS Flexbox or Grid layouts. Neither Dompdf, mpdf, TCPDF nor wkhtmltopdf supports Flexbox or Grid. Use [Google Chrome in headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome#create_a_pdf) if you need modern CSS rules. Consider [browserless](https://docs.browserless.io/docs/pdf.html).
 
