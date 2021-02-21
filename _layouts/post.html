@@ -24,6 +24,15 @@ layout: default
       {%- if page.author -%}
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}</p>
+
+    {%- if page.tags -%}
+    <p class="post-meta">Tags:
+      {% for tag in page.tags %}
+      {% assign tag_slug = tag | slugify: "raw" %}
+      <a href="/tag/{{ tag_slug }}/">{{ tag }}</a>
+      {% endfor %}
+    </p>
+    {%- endif -%}
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
