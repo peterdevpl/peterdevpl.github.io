@@ -17,6 +17,7 @@ $brand-color:      #2a7ae2 !default;
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
+$very-light-grey:  #F8F8F8;
 
 $table-text-align: left !default;
 
@@ -48,5 +49,6 @@ $on-laptop:        800px !default;
   "minima/base",
   "minima/layout",
   "minima/syntax-highlighting",
-  "figures"
+  "figures",
+  "layout"
 ;
