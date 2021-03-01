@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Picking a PHP tool to read and manipulate PDF files"
+title:  "Picking a PHP tool to read and manipulate PDF files (2021 update)"
 date:   2019-01-25 17:00:00 +0100
-last_modified_at: 2020-01-18 17:00:00 +0100
+last_modified_at: 2021-03-01 21:00:00 +0100
 description: Extracting text and metadata from PDF, editing PDF files, adding stamps, extracting images, making screenshots. Updated for 2020.
 excerpt: Today we will browse possibilities to read and edit existing PDF files.
 image: /assets/reading_pdf_files.jpg
@@ -22,13 +22,17 @@ Again, we will start from checking if there are any PHP libraries to manipulate 
 
 ### pdfparser
 
-There is an interesting library called [smalot/pdfparser](https://github.com/smalot/pdfparser). It has almost 1000 stars on GitHub. It utilizes [TCPDF Parser](https://github.com/tecnickcom/TCPDF/blob/master/tcpdf_parser.php) to parse a PDF file into an array of document objects which is further processed to get what we need.
+There is an interesting library called [smalot/pdfparser](https://github.com/smalot/pdfparser). It has over 1500 stars on GitHub. It parses a PDF file into an array of document objects which is further processed to get what we need.
 
 The library is convenient as it supports both parsing an existing file or a string with PDF data. **It allows you to extract metadata and plain text from a document**. You can test the library at its [demo page](https://www.pdfparser.org/demo).
 
-The problem is that Sebastien’s library is based on old TCPDF version 6 parser which some day is going to be replaced by a newer rewrite called [tc-lib-pdf-parser](https://github.com/tecnickcom/tc-lib-pdf-parser). However, that new parser is still under development and [Sebastien’s is aware of its existence](https://github.com/smalot/pdfparser/pull/92#issuecomment-205732819).
-
 [smalot/pdfparser](https://github.com/smalot/pdfparser) has commercial support from Actualys.
+
+### tc-lib-pdf-parser
+
+[This is a library made by the creator of TCPDF](https://github.com/tecnickcom/tc-lib-pdf-parser), a well-known library generating PDF files. This parser draws less interest than the first one, though the author has over 15 years of experience handling PDFs.
+
+You can compare both libraries by parsing different documents. They can differ especially in terms of processing corrupted files.
 
 ### FPDI
 
