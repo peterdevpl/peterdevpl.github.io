@@ -94,3 +94,8 @@ There is a wide choice of PHP libraries and external tools which can be used to 
 Please also remember that many tools are developed by the Open Source community and receive little commercial support. They can be abandoned at any time or they might not support newest PHP version from day one (which can impede migrating the rest of your app). And your dependencies have dependencies too, so take a look at `composer.json` when picking a library.
 
 And if your favorite Open Source tool does not do everything you need properly – maybe try contributing? It’s a *community*, after all.
+
+### See also
+
+* [Picking a PHP tool to read and manipulate PDF files]({% post_url 2019-01-25-picking-a-php-tool-to-read-and-manipulate-pdf-files %})
+* [PHP: How to take a screenshot of a PDF page]({% post_url 2021-01-28-php-how-to-take-a-screenshot-of-a-pdf-page %})

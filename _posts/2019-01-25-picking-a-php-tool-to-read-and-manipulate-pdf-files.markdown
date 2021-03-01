@@ -74,3 +74,8 @@ You should pick a tool that’s best for your specific requirements. Most tools 
 Sometimes it occurs to me that many developers are just reinventing the wheel, especially when it comes to a multitude of PDF processing libraries for PHP. The Portable Document Format has almost seven hundred pages of specification. We are all struggling with the same processing issues. That’s why I rather prefer to choose the best tools in different technologies and connect them with interfaces rather than doggedly sticking to a single technology.
 
 Check out the [List of PDF software](https://en.wikipedia.org/wiki/List_of_PDF_software) at Wikipedia.
+
+### See also
+
+* [Picking a PHP tool to generate PDFs (2021 update)]({% post_url 2019-01-11-picking-a-php-tool-to-generate-pdfs %})
+* [PHP: How to take a screenshot of a PDF page]({% post_url 2021-01-28-php-how-to-take-a-screenshot-of-a-pdf-page %})

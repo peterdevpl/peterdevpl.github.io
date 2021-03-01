@@ -170,3 +170,8 @@ Refer to the [Inkscape man page](https://inkscape.org/doc/inkscape-man.html) for
 ## Further reading
 
 Check out [this StackOverflow thread to see more ideas on how to convert a PDF file to PNG.](https://stackoverflow.com/questions/653380/converting-a-pdf-to-png)
+
+**Other articles on my blog:**
+
+* [Picking a PHP tool to generate PDFs (2021 update)]({% post_url 2019-01-11-picking-a-php-tool-to-generate-pdfs %})
+* [Picking a PHP tool to read and manipulate PDF files]({% post_url 2019-01-25-picking-a-php-tool-to-read-and-manipulate-pdf-files %})
