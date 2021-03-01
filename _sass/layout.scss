@@ -7,3 +7,32 @@
       margin-bottom: 0;
    }
 }
+
+.site-footer {
+   padding-bottom: 45px;
+}
+
+.call-to-action {
+   background: black;
+   bottom: 0;
+   color: white;
+   left: 0;
+   position: fixed;
+   right: 0;
+   text-align: center;
+
+   svg {
+      fill: white;
+      vertical-align: baseline;
+   }
+
+   a {
+      color: white;
+      display: block;
+      padding: 0.5ex 0;
+
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}
