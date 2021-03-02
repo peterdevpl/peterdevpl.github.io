@@ -43,6 +43,10 @@ social:
 feed:
   path: /feed/index.xml
 
+twitter: # For jekyll-seo-tag
+  username: peterdevpl
+  card: summary
+
 # Build settings
 theme: minima
 plugins:
