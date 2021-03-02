@@ -1,15 +1,29 @@
 .site-header, .site-footer {
    background: $very-light-grey;
+}
+
+.site-header {
+   padding-top: 5px;
+   padding-bottom: 10px;
+}
+
+.site-title {
+   line-height: 40px;
+}
+
+.site-subtitle {
+   clear: both;
+   color: $grey-color;
+}
+
+.site-footer {
+   padding-bottom: 45px;
 
    .built {
       color: $grey-color-dark;
       font-size: 90%;
       margin-bottom: 0;
    }
-}
-
-.site-footer {
-   padding-bottom: 45px;
 }
 
 .call-to-action {
