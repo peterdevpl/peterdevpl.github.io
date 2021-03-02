@@ -24,7 +24,18 @@ Again, we will start from checking if there are any PHP libraries to manipulate 
 
 There is an interesting library called [smalot/pdfparser](https://github.com/smalot/pdfparser). It has over 1500 stars on GitHub. It parses a PDF file into an array of document objects which is further processed to get what we need.
 
-The library is convenient as it supports both parsing an existing file or a string with PDF data. **It allows you to extract metadata and plain text from a document**. You can test the library at its [demo page](https://www.pdfparser.org/demo).
+The library is convenient as it supports both parsing an existing file or a string with PDF data. **It allows you to extract metadata and plain text from a document** along with other objects (images, fonts). However, encrypted files are not yet supported. You can test the library at its [demo page](https://www.pdfparser.org/demo).
+
+```php
+$parser = new Smalot\PdfParser\Parser();
+$document = $parser->parseFile('test.pdf');
+
+// creator, date of creation, number of pages etc.
+print_r($document->getDetails());
+
+// text dump
+echo $document->getText();
+```
 
 [smalot/pdfparser](https://github.com/smalot/pdfparser) has commercial support from Actualys.
 
@@ -48,7 +59,7 @@ The need to extract plain text from a document led me to the [Apache PDFBox libr
 
 Later I discovered the Poppler library, [which is said to fully support the ISO 32000-1 standard for PDF](https://www.fsf.org/blogs/community/gnu-pdf-project-leaves-high-priority-projects-list-mission-complete). This C++ library can be accessed via dedicated CLI tools – [poppler-utils](https://en.wikipedia.org/wiki/Poppler_(software)#poppler-utils), which we can run from PHP. For example, the `pdftotext` tool gives a lot of control over the **plain text dump** – you can even preserve a proper document layout while rendering, or crop the document to a specified region. Also, `pdfinfo` provides comprehensive **information about a file**, like page format, encryption type etc. You can use it to extract JavaScript too.
 
-Sometimes you might want to **create a PNG or JPEG screenshot of a document**. You can do it with `pdftocairo` from Poppler, or use ImageMagick’s `convert`.
+Sometimes you might want to **create a PNG or JPEG screenshot of a document**. You can do it with `pdftocairo` from Poppler, or use ImageMagick’s `convert`. At the time of writing, there are no native PHP libraries to render a PDF.
 
 ## Wrappers
 
