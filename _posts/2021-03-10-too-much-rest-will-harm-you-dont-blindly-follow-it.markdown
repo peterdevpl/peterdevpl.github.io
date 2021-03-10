@@ -5,6 +5,7 @@ date:   2021-03-10 20:00:00 +0100
 permalink: /2021/03/10/too-much-rest-will-harm-you-dont-blindly-follow-it/
 image: /assets/rest_example.png
 description: Always treat a URL like public data. Although REST recommends a set of web architecture best practices, you need to take additional measures to prevent sensitive data exposure.
+excerpt: "REST, or Representational State Transfer, is a set of web architecture best practices. Perhaps it is best known for associating resources and actions in order to create clean API interfaces. Although REST works perfectly fine in most situations, I will show you how it can cause security issues where security matters most: the payment industry."
 tags:
   - security
 ---
