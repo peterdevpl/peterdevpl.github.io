@@ -12,7 +12,11 @@ tags:
   - php
 ---
 
-> TL;DR For HTML to PDF conversion, use [Dompdf](https://github.com/dompdf/dompdf) library if you don’t need CSS Flexbox or Grid layouts. Neither Dompdf, mpdf, TCPDF nor wkhtmltopdf supports Flexbox or Grid. Use [Google Chrome in headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome#create_a_pdf) if you need modern CSS rules. Consider [browserless](https://docs.browserless.io/docs/pdf.html).
+> TL;DR For HTML to PDF conversion, use [Dompdf](https://github.com/dompdf/dompdf) library if you don’t need CSS Flexbox or Grid layouts. Neither Dompdf, mpdf, TCPDF nor wkhtmltopdf supports Flexbox or Grid. Use [Google Chrome in headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome#create_a_pdf) or [WeasyPrint](https://weasyprint.org/) if you need modern CSS rules. Consider [browserless](https://docs.browserless.io/docs/pdf.html).
+
+<aside>
+  <iframe width='160' height='400' src='https://leanpub.com/mastering-pdf-with-php/embed' frameborder='0' allowtransparency='true'></iframe>
+</aside>
 
 I spent a lot of time working with different tools to generate PDF files, mainly invoices and reports. Some of these documents were really sophisticated, including multi-page tables, colorful charts, headers and footers. I tried generating documents by hand and converting HTML to PDF, or even LaTeX to PDF.
 

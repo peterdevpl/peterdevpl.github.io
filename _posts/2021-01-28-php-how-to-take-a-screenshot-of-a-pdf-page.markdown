@@ -4,10 +4,15 @@ title:  "PHP: How to take a screenshot of a PDF page"
 date:   2021-01-28 17:00:00 +0100
 permalink: /2021/01/28/php-how-to-take-a-screenshot-of-a-pdf-page/
 description: A guide on converting PDF files to PNG and JPEG using ImageMagick, GhostScript, Poppler or Inkscape. Choose the best solution for you!
+excerpt: If your application allows uploading PDF files, it’s likely that you need to prepare screenshots or thumbnails for these documents – at least the first page.
 tags:
   - php
   - pdf
 ---
+
+<aside>
+  <iframe width='160' height='400' src='https://leanpub.com/mastering-pdf-with-php/embed' frameborder='0' allowtransparency='true'></iframe>
+</aside>
 
 If your application allows **uploading PDF files**, it’s likely that you need to prepare **screenshots or thumbnails** for these documents – at least the first page.
 

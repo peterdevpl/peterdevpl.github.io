@@ -14,6 +14,10 @@ tags:
 
 > TL;DR For simple PDF text and metadata extraction, use [pdfparser](https://github.com/smalot/pdfparser). For advanced options, try [pdftotext](http://manpages.ubuntu.com/manpages/bionic/man1/pdftotext.1.html) and [pdfinfo](http://manpages.ubuntu.com/manpages/bionic/en/man1/pdfinfo.1.html) from [Poppler](https://poppler.freedesktop.org/). To join or split PDF files, encrypt them or apply watermarks, use [pdftk](https://www.pdflabs.com/docs/pdftk-man-page/). To make a JPEG or PNG screenshot of a PDF, use [ImageMagick](http://www.imagemagick.org/discourse-server/viewtopic.php?t=31313) or [pdftocairo](http://manpages.ubuntu.com/manpages/bionic/en/man1/pdftocairo.1.html).
 
+<aside>
+  <iframe width='160' height='400' src='https://leanpub.com/mastering-pdf-with-php/embed' frameborder='0' allowtransparency='true'></iframe>
+</aside>
+
 [In the previous article](/2019/01/11/picking-a-php-tool-to-generate-pdfs/) I described several tools that can be used together with PHP to create PDF files. Back then, the choice was not easy and we had a lot of criteria to consider while picking the best tool. Today we will browse possibilities to read and edit existing PDF files.
 
 ## Native PHP libraries
