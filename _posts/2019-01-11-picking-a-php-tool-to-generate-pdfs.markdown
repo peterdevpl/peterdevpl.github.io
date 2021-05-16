@@ -2,7 +2,7 @@
 layout: post
 title:  "Picking a PHP tool to generate PDFs (2021 update)"
 date:   2019-01-11 17:00:00 +0100
-last_modified_at: 2021-05-15 17:30:00 +0100
+last_modified_at: 2021-05-15 17:45:00 +0100
 description: "Comparison of HTML to PDF conversion tools: mPDF, TCPDF, Dompdf, wkhtmltopdf and Headless Chrome."
 excerpt: I spent a lot of time working with different tools to generate PDF files, mainly invoices and reports. Some of these documents were really sophisticated, including multi-page tables, colorful charts, headers and footers. I tried generating documents by hand and converting HTML to PDF, or even LaTeX to PDF.
 image: /assets/generating_pdf_files.jpg
