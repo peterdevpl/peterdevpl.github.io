@@ -55,3 +55,16 @@ aside {
    float: right;
    margin-left: 1ex;
 }
+
+aside.book-ad {
+   background: $very-light-grey;
+   border: solid $grey-color-light 1px;
+   font-size: 125%;
+   padding: 10px 5px;
+   text-align: center;
+   width: 200px;
+
+   img {
+      margin-bottom: 1ex;
+   }
+}
