@@ -2,8 +2,8 @@
 layout: post
 title:  "Picking a PHP tool to generate PDFs (2021 update)"
 date:   2019-01-11 17:00:00 +0100
-last_modified_at: 2021-05-24 17:45:00 +0100
-description: "Comparison of HTML to PDF conversion tools: mPDF, TCPDF, Dompdf, wkhtmltopdf and Headless Chrome."
+last_modified_at: 2021-05-27 18:00:00 +0100
+description: "Comparison of HTML to PDF conversion tools: mPDF, TCPDF, Dompdf, wkhtmltopdf, Headless Chrome, WeasyPrint and Prince."
 excerpt: I spent a lot of time working with different tools to generate PDF files, mainly invoices and reports. Some of these documents were really sophisticated, including multi-page tables, colorful charts, headers and footers. I tried generating documents by hand and converting HTML to PDF, or even LaTeX to PDF.
 image: /assets/generating_pdf_files.jpg
 permalink: /2019/01/11/picking-a-php-tool-to-generate-pdfs/
@@ -12,7 +12,7 @@ tags:
   - php
 ---
 
-> TL;DR For HTML to PDF conversion, use [Dompdf](https://github.com/dompdf/dompdf) library if you don’t need CSS Flexbox or Grid layouts. Neither Dompdf, mpdf, TCPDF nor wkhtmltopdf supports Flexbox or Grid. Use [Google Chrome in headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome#create_a_pdf) or [WeasyPrint](https://weasyprint.org/) if you need modern CSS rules. Consider [browserless](https://docs.browserless.io/docs/pdf.html).
+> TL;DR For HTML to PDF conversion, use [Dompdf](https://github.com/dompdf/dompdf) library if you don’t need CSS Flexbox or Grid layouts. For modern CSS, use either [Google Chrome in headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome#create_a_pdf) or [WeasyPrint](https://weasyprint.org/). Consider [browserless](https://docs.browserless.io/docs/pdf.html).
 
 <aside class="book-ad">
   <a href="https://leanpub.com/mastering-pdf-with-php/read#leanpub-auto-understanding-fonts">
@@ -56,19 +56,19 @@ To give you some idea of what to expect from above libraries, I compiled **a com
 
 <div class="pdf-screenshots">
   <figure class="image">
-    <img src="/assets/invoice-chrome.png">
+    <img src="/assets/invoice-chrome.png" width="370" height="480" alt="Invoice rendered by Google Chrome">
     <figcaption>Google Chrome (reference image)</figcaption>
   </figure>
   <figure class="image">
-    <img src="/assets/invoice-tcpdf.png">
-    <figcaption>TCPDF 6.3.5</figcaption>
+    <img src="/assets/invoice-tcpdf.png" width="370" height="480" alt="Invoice rendered by TCPDF">
+    <figcaption>TCPDF 6.4.1</figcaption>
   </figure>
   <figure class="image">
-    <img src="/assets/invoice-mpdf.png">
-    <figcaption>mPDF 8.0.10</figcaption>
+    <img src="/assets/invoice-mpdf.png" width="370" height="480" alt="Invoice rendered by mpdf">
+    <figcaption>mPDF 8.0.11</figcaption>
   </figure>
   <figure class="image">
-    <img src="/assets/invoice-dompdf.png">
+    <img src="/assets/invoice-dompdf.png" width="370" height="480" alt="Invoice rendered by Dompdf">
     <figcaption>Dompdf 1.0.2</figcaption>
   </figure>
 </div>
@@ -79,11 +79,32 @@ As you can see, **none of the PHP libraries understood CSS Flexbox**. mPDF and T
 
 Native PHP solutions were not enough for me, so I decided to use an external tool backed by a fully functional, WebKit rendering engine. My employer was already using [wkhtmltopdf](https://wkhtmltopdf.org/) which supports everything I needed: SVG images, multi-page tables, headers and footers with page numbers and section names, automatic bookmarks. Having old reports rewritten to HTML and CSS, I was able to implement all the new features requested by the business.
 
-`wkhtmltopdf` certainly isn’t bug-free; for example, I had some issues with repeating table headers on consecutive pages. Also, upgrading from 0.12.3 to 0.12.4 broke my document layout which used dynamic headers and footers, so I had to go back to the old version.
+`wkhtmltopdf` certainly isn’t bug-free; for example, I had some issues with repeating table headers on consecutive pages. Also, upgrading from 0.12.3 to 0.12.4 broke my document layout which used dynamic headers and footers, but fortunately the bug was fixed in the next version.
 
 Then I got familiar with [PhantomJS](http://phantomjs.org/), which was used mainly to conduct automatic browser tests in a headless mode (without the browser window). It could also capture PNG and PDF screenshots. PhantomJS used a newer version of the WebKit engine. However, the project is suspended now.
 
 Almost a year before the suspension of PhantomJS, [Google announced that Chrome can run in a headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome). This means you can utilize the latest Blink rendering engine to convert HTML/CSS to PDF from your command line. This is perfect for rendering really complex documents utilizing latest web standards. The document looks exactly the same in your browser and in the final PDF file which makes development a lot easier.
+
+Two other tools I discovered are [WeasyPrint](https://weasyprint.org/) and [Prince](https://www.princexml.com/). The first one is an open source project backed by donations. Prince is an advanced, paid tool for commercial purposes, including book publishing. Its free version places a watermark on every page.
+
+<div class="pdf-screenshots">
+  <figure class="image">
+    <img src="/assets/invoice-chrome.png" width="370" height="480" alt="Invoice rendered by Google Chrome">
+    <figcaption>Google Chrome</figcaption>
+  </figure>
+  <figure class="image">
+    <img src="/assets/invoice-weasyprint.png" width="370" height="480" alt="Invoice rendered by WeasyPrint">
+    <figcaption>WeasyPrint 52.5</figcaption>
+  </figure>
+  <figure class="image">
+    <img src="/assets/invoice-prince.png" width="370" height="480" alt="Invoice rendered by Prince">
+    <figcaption>Prince 14.2</figcaption>
+  </figure>
+  <figure class="image">
+    <img src="/assets/invoice-wkhtml.png" width="370" height="480" alt="Invoice rendered by wkhtmltopdf">
+    <figcaption>wkhtmltopdf 0.12.6</figcaption>
+  </figure>
+</div>
 
 ## Connecting PHP with external tools
 
