@@ -52,17 +52,17 @@
 }
 
 aside {
-   float: right;
-   margin-left: 1ex;
+   float: left;
+   margin-right: 1em;
 }
 
 aside.book-ad {
    background: $very-light-grey;
    border: solid $grey-color-light 1px;
-   font-size: 125%;
+   font-size: 110%;
    padding: 10px 5px;
    text-align: center;
-   width: 200px;
+   width: 185px;
 
    img {
       margin-bottom: 1ex;

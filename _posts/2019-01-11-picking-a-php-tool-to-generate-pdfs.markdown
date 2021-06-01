@@ -12,7 +12,7 @@ tags:
   - php
 ---
 
-> TL;DR For HTML to PDF conversion, use [Dompdf](https://github.com/dompdf/dompdf) library if you don’t need CSS Flexbox or Grid layouts. For modern CSS, use either [Google Chrome in headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome#create_a_pdf) or [WeasyPrint](https://weasyprint.org/). Consider [browserless](https://docs.browserless.io/docs/pdf.html).
+> **TL;DR** For HTML to PDF conversion, use [Dompdf](https://github.com/dompdf/dompdf) library if you don’t need CSS Flexbox or Grid layouts. For modern CSS, use either [Google Chrome in headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome#create_a_pdf) or [WeasyPrint](https://weasyprint.org/). Consider [browserless](https://docs.browserless.io/docs/pdf.html).
 
 <aside class="book-ad">
   <a href="https://leanpub.com/mastering-pdf-with-php/read#leanpub-auto-understanding-fonts">
