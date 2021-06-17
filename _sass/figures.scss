@@ -2,6 +2,10 @@ figure {
   text-align: center;
 }
 
+figure > img {
+  display: inline-block;
+}
+
 figcaption {
   color: $grey-color;
 }
