@@ -95,7 +95,7 @@ Also, Dompdf supports only basic four permissions from an older PDF standard.
 
 Setasign, the company behind FPDF, offers a [commercial library that supports encryption up to 256-bit AES.](https://www.setasign.com/products/setapdf-core/details)
 
-## Encrypting an existing file with PDFtk
+## Encrypting an existing file with command line tools
 
 If your favorite PDF generator does not offer encryption, you can use [PDFtk Server](https://www.pdflabs.com/tools/pdftk-server/) to encrypt an existing file with 128-bit RC4. PDFtk does not support AES.
 
@@ -104,6 +104,8 @@ With PDFtk, protecting a file is as simple as running the command below in your 
 ```
 pdftk input.pdf output encrypted.pdf owner_pw test123 user_pw test456
 ```
+
+To use AES, you need to pick a commercial tool, for example [Coherent PDF.](https://www.coherentpdf.com/cpdfmanual/cpdfmanualch4.html#x7-350004)
 
 ## Summary
 
