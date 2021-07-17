@@ -51,7 +51,14 @@ Usually, there are no "one-size-fits-all" solutions. Some fonts do not have an "
 
 The most common font file formats are [OpenType](https://en.wikipedia.org/wiki/OpenType), [TrueType](https://en.wikipedia.org/wiki/TrueType) and [Type 1](https://en.wikipedia.org/wiki/PostScript_fonts#Type_1). They differ in features and the way of describing shapes. All of them can be used in a PDF document.
 
-[Google Fonts](https://fonts.google.com/), a popular web font provider, might not a suitable source for PDF-ready fonts. They use the [WOFF2 format](https://www.w3.org/TR/WOFF2/) which is not supported natively by PDF. You can use additional tools to convert WOFF2 to TrueType or OpenType.
+The so-called **"web fonts"** are usually compressed with a [WOFF2 format](https://www.w3.org/TR/WOFF2/) which is not supported by PDF. [Google Fonts](https://fonts.google.com/), a popular web font provider, fortunately offers a "Download family" feature which gives you the full TrueType archive.
+
+However, if you only have a WOFF2 font file, you can still convert it to TrueType or OpenType. Either use an online tool, or the Linux terminal:
+
+```
+sudo apt install fontforge woff2
+woff2_decompress font.woff2
+```
 
 ## Selecting a font in CSS
 
