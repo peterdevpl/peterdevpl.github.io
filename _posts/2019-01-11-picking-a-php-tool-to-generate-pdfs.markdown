@@ -2,7 +2,7 @@
 layout: post
 title:  "Picking a PHP tool to generate PDFs (2021 update)"
 date:   2019-01-11 17:00:00 +0100
-last_modified_at: 2021-05-27 18:00:00 +0100
+last_modified_at: 2021-07-18 18:00:00 +0100
 description: "Comparison of HTML to PDF conversion tools: mPDF, TCPDF, Dompdf, wkhtmltopdf, Headless Chrome, WeasyPrint and Prince."
 excerpt: I spent a lot of time working with different tools to generate PDF files, mainly invoices and reports. Some of these documents were really sophisticated, including multi-page tables, colorful charts, headers and footers. I tried generating documents by hand and converting HTML to PDF, or even LaTeX to PDF.
 image: /assets/generating_pdf_files.jpg
@@ -77,9 +77,7 @@ As you can see, **none of the PHP libraries understood CSS Flexbox**. mPDF and T
 
 ## External CLI tools
 
-Native PHP solutions were not enough for me, so I decided to use an external tool backed by a fully functional, WebKit rendering engine. My employer was already using [wkhtmltopdf](https://wkhtmltopdf.org/) which supports everything I needed: SVG images, multi-page tables, headers and footers with page numbers and section names, automatic bookmarks. Having old reports rewritten to HTML and CSS, I was able to implement all the new features requested by the business.
-
-`wkhtmltopdf` certainly isn’t bug-free; for example, I had some issues with repeating table headers on consecutive pages. Also, upgrading from 0.12.3 to 0.12.4 broke my document layout which used dynamic headers and footers, but fortunately the bug was fixed in the next version.
+Native PHP solutions were not enough for me, so I decided to use an external tool backed by a fully functional, WebKit rendering engine. My employer was already using [wkhtmltopdf](https://wkhtmltopdf.org/) which supported everything I needed: SVG images, multi-page tables, headers and footers with page numbers and section names, automatic bookmarks.
 
 Then I got familiar with [PhantomJS](http://phantomjs.org/), which was used mainly to conduct automatic browser tests in a headless mode (without the browser window). It could also capture PNG and PDF screenshots. PhantomJS used a newer version of the WebKit engine. However, the project is suspended now.
 
@@ -110,19 +108,19 @@ Two other tools I discovered are [WeasyPrint](https://weasyprint.org/) and [Prin
 
 The easiest way would be to execute an external tool as a shell command. You can do it with PHP functions like `shell_exec` or `proc_open`, but it’s not very convenient.
 
-I recommend using [symfony/process](https://symfony.com/doc/current/components/process.html) library and utilize standard streams whenever applicable. A process should accept input HTML through STDIN and send the resulting PDF via STDOUT. It can also produce some errors through STDERR. It might turn out that you won’t need any temporary files to do the job.
+I recommend using [symfony/process](https://symfony.com/doc/current/components/process.html) library and utilize standard streams whenever applicable. A process should accept input HTML through STDIN and send the resulting PDF via STDOUT. [See this article to know Symfony Process better.]({% post_url 2021-04-02-execute-a-shell-command-in-php %})
 
 There are also several wrapper libraries, like [phpwkhtmltopdf](https://github.com/mikehaertl/phpwkhtmltopdf) or [KnpLabs/snappy](https://github.com/KnpLabs/snappy).
 
 For Chrome, consider using [Browserless](https://www.browserless.io/). You can choose between a free Docker image with pre-configured Chrome with dependencies, or a paid SaaS platform to convert your HTMLs to PDF. With the Docker image, it is really easy to [send HTML and receive PDF via HTTP](https://docs.browserless.io/docs/pdf.html).
+
+You can also try the [Chrome PHP](https://github.com/chrome-php/chrome) library which connects to the Chrome executable and gives you full control over printing the PDF, like setting headers and footers. Another common way to deal with Chrome is via [Puppeteer](https://pptr.dev/).
 
 ## Conclusion
 
 There is a wide choice of PHP libraries and external tools which can be used to dynamically create PDF files. You should choose a combination which suits your business needs. **For simple documents, you don’t need a complex rendering engine**. Save disk space, CPU and RAM!
 
 Please also remember that many tools are developed by the Open Source community and receive little commercial support. They can be abandoned at any time or they might not support newest PHP version from day one (which can impede migrating the rest of your app). And your dependencies have dependencies too, so take a look at `composer.json` when picking a library.
-
-And if your favorite Open Source tool does not do everything you need properly – maybe try contributing? It’s a *community*, after all.
 
 ### See also
 
