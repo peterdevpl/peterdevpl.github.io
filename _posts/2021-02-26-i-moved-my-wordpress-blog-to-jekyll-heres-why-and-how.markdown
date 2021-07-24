@@ -335,3 +335,5 @@ I also had to open my GitHub blog repository, go to the `Settings` page, set the
 Keep it simple! Don't use over-engineered solutions for simple problems. I wish I had my blog optimized as a static site from day one and haven't paid for additional hosting.
 
 Jekyll has many alternatives, and so does GitHub. For me, this combo works perfectly fine, but you're free to discover other options.
+
+**You can also browse the [entire source repository for my blog.](https://github.com/peterdevpl/peterdevpl.github.io/)**
