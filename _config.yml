@@ -52,6 +52,7 @@ theme: minima
 plugins:
   - jekyll-archives
   - jekyll-feed
+  - jekyll-redirect-from
   - jekyll-seo-tag
 
 sass:

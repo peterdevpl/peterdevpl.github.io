@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Picking a PHP tool to read and manipulate PDF files (2021 update)"
-date:   2019-01-25 17:00:00 +0100
-last_modified_at: 2021-03-01 21:00:00 +0100
+title:  "Picking a PHP tool to read and manipulate PDF files"
+date:   2021-03-01 17:00:00 +0100
 description: Extracting text and metadata from PDF, editing PDF files, adding stamps, extracting images, making screenshots. Updated for 2021.
 excerpt: Today we will browse possibilities to read and edit existing PDF files.
 image: /assets/reading_pdf_files.jpg
-permalink: /2019/01/25/picking-a-php-tool-to-read-and-manipulate-pdf-files/
+permalink: /picking-a-php-tool-to-read-and-manipulate-pdf-files/
+redirect_from:
+  - /2019/01/25/picking-a-php-tool-to-read-and-manipulate-pdf-files/
 tags:
   - pdf
   - php
