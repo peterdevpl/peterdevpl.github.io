@@ -1,30 +1,31 @@
 ---
 layout: post
-title:  "I moved my Wordpress blog to Jekyll. Here's why and how"
+title:  "I moved my WordPress blog to Jekyll. Here's why and how"
 date:   2021-02-26 20:00:00 +0100
-permalink: /2021/02/26/i-moved-my-wordpress-blog-to-jekyll-heres-why-and-how/
-description: My story about moving a blog from Wordpress to Jekyll - a static site generator.
+permalink: /i-moved-my-wordpress-blog-to-jekyll-heres-why-and-how/
+description: My story about moving a blog from WordPress to Jekyll - a static site generator.
+redirect_from: /2021/02/26/i-moved-my-wordpress-blog-to-jekyll-heres-why-and-how/
 tags:
   - blogging
 ---
 
-I remember the times around 2000 when most websites were static. We edited them locally on our computers and then uploaded to an FTP server. There was plenty of free hosting services. Building your own site was very easy.
+**I remember the times around 2000 when most websites were static.** We edited them locally on our computers and then uploaded to an FTP server. There was plenty of free hosting services. Building your own site was very easy.
 
 Then things became complicated. We were fascinated by the possibilities of PHP - a dynamic script interpreter, coupled with a MySQL database system. Of course such setup requires more server resources and page serving time is longer, but we were so thrilled we didn't care.
 
-Today I know it was stupid to run the whole PHP ecosystem only to join some text files together. Until February 2021 my blog was still built with Wordpress. If I was clever enough to design and use a **Static Site Generator** in 2000...
+Today I know it was stupid to run the whole PHP ecosystem only to join some text files together. Until February 2021 my blog was still built with WordPress. If I was clever enough to design and use a **Static Site Generator** in 2000...
 
 ## Why use a Static Site Generator?
 
 ### No need for a backend
 
-I longer need a full LAMP stack to host my blog. This allowed me to ditch my Lightsail instance which costed me several bucks a month. All pages are generated upfront and then served as static files.
+I no longer need a full LAMP stack to host my blog. This allowed me to ditch my Lightsail instance which costed me several bucks a month. All pages are generated upfront and then served as static files.
 
 ### I can code myself
 
-Wordpress and other Content Management Systems are good for people who can't code. They log into the admin section and write posts with a WYSIWYG editor.
+WordPress and other Content Management Systems are good for people who can't code. They log into the admin section and write posts with a WYSIWYG editor.
 
-I found the Wordpress editor bad for technical writing. This is where **Markdown** comes into play. I get syntax highlighting for my code snippets out of the box.
+I found the WordPress editor bad for technical writing. This is where **Markdown** comes into play. I get syntax highlighting for my code snippets out of the box.
 
 ### Free hosting
 
@@ -88,6 +89,19 @@ I don't always use all metadata, but in the example above I really need to tell 
 During migration, I took great care to preserve all existing links and thus avoid trouble with redirecting pages indexed by search engines. For a permalink like above, Jekyll automatically generates the whole directory structure.
 
 [Read more about the `jekyll-seo-tag` plugin](https://github.com/jekyll/jekyll-seo-tag) to know how to take care of your metadata and SEO.
+
+### Changing permalinks and making redirects
+
+By default, WordPress creates links that include the post date. I decided I no longer want to have the full date in my URLs. But **I can't just change all the links on my blog** all of a sudden. This would *destroy* my presence in the search engines, social media and people's bookmarks.
+
+[The `jekyll-redirect-from` plugin](https://github.com/jekyll/jekyll-redirect-from) automatically creates redirects for me. All I need to after installing and enabling the plugin is a small change in the post's front matter:
+
+```yaml
+permalink: /picking-a-php-tool-to-generate-pdfs/
+redirect_from: /2019/01/11/picking-a-php-tool-to-generate-pdfs/
+```
+
+Jekyll will compile the post to the new directory without a date prefix. In the old path, Jekyll creates a small HTML file which redirects the browser to the new link. That way, everyone having the old link can smoothly jump to the new version.
 
 ### Customizing post layout
 
@@ -179,7 +193,7 @@ The social media icons are rendered inside `_includes/social.html` file which yo
 
 ### Grouping posts by tags
 
-In my Wordpress instance I had all the tags under `/tag/something` URLs. In Jekyll, I can recreate that structure with `jekyll-archives` plugin. First I install it in the command line by typing `gem install jekyll-archives`. Then I go to `.config.yml` and set the plugin up:
+In my WordPress instance I had all the tags under `/tag/something` URLs. In Jekyll, I can recreate that structure with `jekyll-archives` plugin. First I install it in the command line by typing `gem install jekyll-archives`. Then I go to `.config.yml` and set the plugin up:
 
 ```yaml
 plugins:
@@ -236,7 +250,7 @@ The `jekyll-archives` plugin can also list your posts by months. [See the full g
 
 ### Setting ATOM feed
 
-I have my blog aggregated in some lists, so I need to maintain either an RSS or ATOM feed. Wordpress did this automatically under the path `/feed/`. Jekyll by default creates a `feed.xml` file in the root directory. I wanted to keep my old feed URL, so I did this in configuration:
+I have my blog aggregated in some lists, so I need to maintain either an RSS or ATOM feed. WordPress did this automatically under the path `/feed/`. Jekyll by default creates a `feed.xml` file in the root directory. I wanted to keep my old feed URL, so I did this in configuration:
 
 ```yaml
 feed:
