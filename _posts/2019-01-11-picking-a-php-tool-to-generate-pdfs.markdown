@@ -24,7 +24,7 @@ tags:
 
 I spent a lot of time working with different tools to generate PDF files, mainly invoices and reports. Some of these documents were really sophisticated, including multi-page tables, colorful charts, headers and footers. I tried generating documents by hand and converting HTML to PDF, or even LaTeX to PDF.
 
-I know how hard it is to choose between a multitude of libraries and tools, especially when we need to do a non-trivial job. There is no silver bullet; some tools are better for certain jobs and not so good for other jobs. I will try to sum up what I’ve learned through the years.
+I know how hard it is to choose between a multitude of libraries and tools, especially when we need to do a non-trivial job. There is no silver bullet; some tools are better for certain jobs and not so good for other jobs.
 
 ## Two ways of creating a PDF file
 
@@ -36,23 +36,24 @@ Another way is to **convert one document, for example HTML, LaTeX or PostScript 
 
 We used [LaTeX](https://www.latex-project.org/) for an education app which allowed composing tests for students from existing exercises prepared by professionals. Since LaTeX was a primary tool for our editors, it was natural for us to convert their scripts straight to PDF.
 
-**Converting HTML to PDF** is way more complex as today’s web standards are having more and more features, just to mention CSS Flexbox or Grid layouts. Let’s see what we can do.
+**Converting HTML to PDF** is way more complex as today’s web standards are having more and more features, just to mention CSS Flexbox or Grid layouts.
 
 ## Native PHP libraries
 
-My first experience was with native PHP libraries where you had to do most things by hand, like placing text in proper positions line by line, drawing rectangles, calculating table cells, and so on. It was quite fun at the time, but creating more robust documents turned out to be very hard. We used [FPDF](http://www.fpdf.org/) and [ZendPdf](https://github.com/zendframework/ZendPdf) libraries (the latter is discontinued).
+My first experience was with native PHP libraries where you had to do most things by hand, like placing text in proper positions line by line, drawing rectangles, calculating table cells, and so on. We used [FPDF](http://www.fpdf.org/) and [ZendPdf](https://github.com/zendframework/ZendPdf) libraries (the latter is discontinued).
 
-At some point, I ended up maintaining multiple-page, sophisticated school reports with tables and charts rendered by ZendPdf. Business wanted to add even more types of reports. I decided to rewrite all reports as HTML documents with stylesheets and then try to make PDFs from that.
+At some point, I ended up maintaining multiple-page, sophisticated reports with tables and charts. Business wanted to add even more reports. I decided to rewrite them as HTML documents with stylesheets and then try to make PDFs from that.
 
-**There are three PHP libraries capable of parsing HTML/CSS and transforming that to PDF:**
+**There are four PHP libraries capable of parsing HTML/CSS and transforming that to PDF:**
 
 * [mPDF](https://github.com/mpdf/mpdf)
 * [TCPDF](https://github.com/tecnickcom/TCPDF) (will be replaced some day by [tc-lib-pdf](https://github.com/tecnickcom/tc-lib-pdf))
 * [Dompdf](https://github.com/dompdf/dompdf)
+* [typeset.sh](https://typeset.sh/) (paid)
 
-Rendering HTML and CSS certainly isn’t easy, so you cannot expect these libraries to provide the same output you’re seeing in Firefox or Chrome. However, **for simple layouts and formatting they should be enough**. Plus is that you still do not depend on any external tools – just plain PHP!
+You cannot expect these libraries to provide the same output you’re seeing in Firefox or Chrome. However, **for simple layouts and formatting they should be enough**. Plus is that you still do not depend on any external tools – just plain PHP!
 
-To give you some idea of what to expect from above libraries, I compiled **a comparison of an invoice renderings**. These three pictures are made from the same HTML 5 source which utilizes CSS Flexbox to position “Seller” and “Buyer” sections next to each other. It has also some table formatting:
+To give you some idea of what to expect from above libraries, I compiled **a comparison of invoice renderings**. These three pictures are made from the same HTML 5 source which utilizes CSS Flexbox to position “Seller” and “Buyer” sections next to each other. It has also some table formatting:
 
 <div class="pdf-screenshots">
   <figure class="image">
@@ -73,17 +74,17 @@ To give you some idea of what to expect from above libraries, I compiled **a com
   </figure>
 </div>
 
-As you can see, **none of the PHP libraries understood CSS Flexbox**. mPDF and TCPDF had some problems with painting the table. **Dompdf performed the best** and I’m pretty sure that making the “Seller” and “Buyer” sections the old-school way, like `float` or `<table>` would be enough to have a proper result.
+As you can see, **none of the free PHP libraries understood CSS Flexbox**. mPDF and TCPDF had some problems with painting the table. **Dompdf performed the best** and I’m pretty sure that making the “Seller” and “Buyer” sections the old-school way, like `float` or `<table>` would be enough to have a proper result.
 
-## External CLI tools
+## External tools
 
-Native PHP solutions were not enough for me, so I decided to use an external tool backed by a fully functional, WebKit rendering engine. My employer was already using [wkhtmltopdf](https://wkhtmltopdf.org/) which supported everything I needed: SVG images, multi-page tables, headers and footers with page numbers and section names, automatic bookmarks.
+Native PHP solutions were not enough for me, so I decided to use an external tool backed by a fully functional WebKit rendering engine. My employer was already using [wkhtmltopdf](https://wkhtmltopdf.org/) which supported everything I needed: SVG images, multi-page tables, headers and footers with page numbers and section names, automatic bookmarks.
 
 Then I got familiar with [PhantomJS](http://phantomjs.org/), which was used mainly to conduct automatic browser tests in a headless mode (without the browser window). It could also capture PNG and PDF screenshots. PhantomJS used a newer version of the WebKit engine. However, the project is suspended now.
 
-Almost a year before the suspension of PhantomJS, [Google announced that Chrome can run in a headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome). This means you can utilize the latest Blink rendering engine to convert HTML/CSS to PDF from your command line. This is perfect for rendering really complex documents utilizing latest web standards. The document looks exactly the same in your browser and in the final PDF file which makes development a lot easier.
+In 2017, [Google announced that Chrome can run in a headless mode](https://developers.google.com/web/updates/2017/04/headless-chrome). This means you can utilize the latest Blink rendering engine to convert HTML/CSS to PDF from your command line. This is perfect for rendering really complex documents utilizing latest web standards. The document looks exactly the same in your browser and in the final PDF file which makes development a lot easier.
 
-Two other tools I discovered are [WeasyPrint](https://weasyprint.org/) and [Prince](https://www.princexml.com/). The first one is an open source project backed by donations. Prince is an advanced, paid tool for commercial purposes, including book publishing. Its free version places a watermark on every page.
+Two other tools I discovered are [WeasyPrint](https://weasyprint.org/) and [Prince](https://www.princexml.com/). The first one is an open source project backed by donations. Prince is an advanced, paid tool for commercial purposes, including book publishing. Its free version places a watermark on every page. You can use Prince through the [DocRaptor API.](https://docraptor.com/)
 
 <div class="pdf-screenshots">
   <figure class="image">
@@ -114,7 +115,7 @@ There are also several wrapper libraries, like [phpwkhtmltopdf](https://github.c
 
 For Chrome, consider using [Browserless](https://www.browserless.io/). You can choose between a free Docker image with pre-configured Chrome with dependencies, or a paid SaaS platform to convert your HTMLs to PDF. With the Docker image, it is really easy to [send HTML and receive PDF via HTTP](https://docs.browserless.io/docs/pdf.html).
 
-You can also try the [Chrome PHP](https://github.com/chrome-php/chrome) library which connects to the Chrome executable and gives you full control over printing the PDF, like setting headers and footers. Another common way to deal with Chrome is via [Puppeteer](https://pptr.dev/).
+You can also try the [Chrome PHP](https://github.com/chrome-php/chrome) library which connects to the Chrome executable and gives you full control over printing the PDF, like setting headers and footers. Another common way to deal with Chrome is via [Puppeteer](https://pptr.dev/) or overlays which offer additional printing functions: [Paged.js](https://www.pagedjs.org/) and [Vivliostyle](https://vivliostyle.org/).
 
 ## Conclusion
 
