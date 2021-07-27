@@ -70,7 +70,7 @@ To give you some idea of what to expect from above libraries, I compiled **a com
   </figure>
   <figure class="image">
     <img src="/assets/invoice-mpdf.png" width="370" height="480" alt="Invoice rendered by mpdf">
-    <figcaption>mPDF 8.0.11</figcaption>
+    <figcaption>mPDF 8.0.12</figcaption>
   </figure>
   <figure class="image">
     <img src="/assets/invoice-dompdf.png" width="370" height="480" alt="Invoice rendered by Dompdf">
