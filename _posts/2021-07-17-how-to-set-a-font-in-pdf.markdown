@@ -2,9 +2,10 @@
 layout: post
 title:  "How to set a font in a PDF document"
 date:   2021-07-17 15:00:00 +0100
-description: "How to set a font in a PDF document with mPDF, Dompdf, wkhtmltopdf, Chrome, WeasyPrint and Prince"
-excerpt: "In this article, you will learn how to set custom fonts when converting HTML to PDF. We will cover several conversion tools, including Headless Chrome, WeasyPrint, Prince, wkhtmltopdf, mPDF and Dompdf."
-permalink: /2021/07/17/how-to-set-a-font-in-pdf/
+description: "How to set a font in a PDF document with TCPDF, mPDF, Dompdf, wkhtmltopdf, Chrome, WeasyPrint and Prince"
+excerpt: "In this article, you will learn how to set custom fonts when converting HTML to PDF. We will cover several conversion tools, including Headless Chrome, WeasyPrint, Prince, wkhtmltopdf, TCPDF, mPDF and Dompdf."
+permalink: /how-to-set-a-font-in-pdf/
+redirect_from: /2021/07/17/how-to-set-a-font-in-pdf/
 tags:
   - pdf
   - php
@@ -182,3 +183,64 @@ $mpdf->Output('output.pdf', 'F');
 ```
 
 When registering font files, you have to declare their style with `R`, `B`, `I` and `BI` identifiers, corresponding to "regular", "bold", "italic" and "bold italic" styles, respectively.
+
+## Custom fonts in TCPDF
+
+TCPDF follows a similar font registration pattern to the previous two libraries. You can do it in two ways - either in the command line, or directly in PHP code.
+
+Thanks to the command line you can embed the conversion commands in some Continuous Delivery pipeline that builds your application. Instead of committing the temporary font files, you can rebuild them every time with a simple command like this (assuming you're using Composer):
+
+```
+php ./vendor/tecnickcom/tcpdf/tools/tcpdf_addfont.php -b -f 32 -o /home/someuser/fonts/tmp/ -i CaslonItalic.ttf
+```
+
+If you don't use the command line, you can still do the same conversion thing in PHP using the `TCPDF_FONTS` class:
+
+```php
+$fontDirectory = '/home/someuser/fonts/';
+
+// The trailing slash is mandatory here
+$tempDirectory = $fontDirectory . 'tmp/';
+
+$fontname = TCPDF_FONTS::addTTFfont(
+    $fontDirectory . 'CaslonItalic.ttf', 'TrueTypeUnicode', '', 32, $tempDirectory
+);
+
+$pdf = new TCPDF('P', 'mm', 'LETTER');
+$pdf->AddPage();
+$pdf->AddFont($fontname, 'I', $tempDirectory . $fontname . '.php');
+$pdf->writeHTML($html);
+file_put_contents('output.pdf', $pdf->Output('', 'S'));
+```
+
+The `addTTFfont()` method parses the original font file and creates three temporary files in the directory of your choice. Obviously, the script must have write access to that path. The return value holds a font file name which is usually a lowercase string. With `AddFont()` method you register the PHP font definition file created earlier.
+
+Now you can use the font inside the document like this (remember about the lowercase font family name):
+
+```css
+body {
+  font-family: 'caslon';
+  font-size: 72pt;
+  font-style: italic;
+}
+```
+
+Instead of using CSS, you can also set the current font with PHP:
+
+```php
+$pdf->SetFont($fontname, 'I', 72);
+```
+
+The mysterious number 32 which appears both in the command line call and the `addTTFfont()` method is the *font descriptor flag* from the PDF specification. Fixed and italic fonts are usually autodetected, but for other types you have to specify an exact flag value:
+
+| Font descriptor flag | Meaning                         |
+| -------------------- | ------------------------------- |
+| 1                    | fixed font                      |
+| 4                    | symbol font                     |
+| 8                    | script (handwriting)            |
+| 32                   | non-symbol (standard) font      |
+| 64                   | italic font                     |
+| 65,536               | all caps (no lowercase letters) |
+| 131,072              | small caps                      |
+
+> TCPDF does not support OpenType nor WOFF2 fonts.
