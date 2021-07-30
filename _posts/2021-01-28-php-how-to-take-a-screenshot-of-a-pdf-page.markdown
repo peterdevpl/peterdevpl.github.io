@@ -10,10 +10,6 @@ tags:
   - pdf
 ---
 
-<aside>
-  <iframe width='160' height='400' src='https://leanpub.com/mastering-pdf-with-php/embed' frameborder='0' allowtransparency='true'></iframe>
-</aside>
-
 If your application allows **uploading PDF files**, it’s likely that you need to prepare **screenshots or thumbnails** for these documents – at least the first page.
 
 You can’t do this with a pure PHP setup. You’re going to need an **external application to read PDF and save an image**, like [ImageMagick](https://imagemagick.org/), [GhostScript](https://www.ghostscript.com/index.html), [Poppler](https://poppler.freedesktop.org/) or [Inkscape](https://inkscape.org/). Before you start coding, check which one is installed on your server.
