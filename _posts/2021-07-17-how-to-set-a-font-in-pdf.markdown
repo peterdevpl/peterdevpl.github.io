@@ -11,7 +11,7 @@ tags:
   - php
 ---
 
-In this article, you will learn how to set **custom fonts when converting HTML to PDF.** We will cover several conversion tools, including [Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome), [WeasyPrint](https://weasyprint.org/), [Prince](https://www.princexml.com/), [wkhtmltopdf](https://wkhtmltopdf.org/) and PHP libraries: [mPDF](https://github.com/mpdf/mpdf) and [Dompdf](https://github.com/dompdf/dompdf).
+In this article, you will learn how to set **custom fonts when converting HTML to PDF.** We will cover several conversion tools, including [Headless Chrome](https://developers.google.com/web/updates/2017/04/headless-chrome), [WeasyPrint](https://weasyprint.org/), [Prince](https://www.princexml.com/), [wkhtmltopdf](https://wkhtmltopdf.org/) and PHP libraries: [mPDF](https://github.com/mpdf/mpdf), [TCPDF](https://tcpdf.org/) and [Dompdf](https://github.com/dompdf/dompdf).
 
 ## Some theory about fonts and text
 
