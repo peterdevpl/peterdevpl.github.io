@@ -2,7 +2,8 @@
 layout: post
 title:  "Executing shell commands from a PHP script"
 date:   2021-04-02 20:00:00 +0100
-permalink: /2021/04/02/execute-a-shell-command-in-php/
+permalink: /execute-a-shell-command-in-php/
+redirect_from: /2021/04/02/execute-a-shell-command-in-php/
 description: All the details of calling an external process from PHP.
 excerpt: "If you need to call an external program from your PHP script, for example to create a PDF file or convert images, there are several ways to do that. I strongly recommend using the Symfony Process Component. It wraps around native PHP functions like proc_open() and it provides extra level of security. It is also very convenient because of an object-oriented interface."
 tags:

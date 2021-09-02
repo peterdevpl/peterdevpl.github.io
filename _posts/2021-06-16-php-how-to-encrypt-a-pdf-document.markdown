@@ -3,7 +3,8 @@ layout: post
 title:  "How to encrypt a PDF document in PHP"
 date:   2021-06-16 17:00:00 +0100
 description: "Examples of encrypting a document with TCPDF, mPDF, Dompdf and PDFtk"
-permalink: /2021/06/16/php-how-to-encrypt-a-pdf-document/
+permalink: /php-how-to-encrypt-a-pdf-document/
+redirect_from: /2021/06/16/php-how-to-encrypt-a-pdf-document/
 tags:
   - pdf
   - php
