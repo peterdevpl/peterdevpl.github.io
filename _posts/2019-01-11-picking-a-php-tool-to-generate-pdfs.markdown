@@ -2,7 +2,7 @@
 layout: post
 title:  "Picking a PHP tool to generate PDFs (2021 update)"
 date:   2019-01-11 17:00:00 +0100
-last_modified_at: 2021-10-20 22:00:00 +0100
+last_modified_at: 2021-12-27 22:00:00 +0100
 description: "Comparison of HTML to PDF conversion tools: mPDF, TCPDF, Dompdf, typeset.sh, wkhtmltopdf, Headless Chrome, WeasyPrint and Prince."
 excerpt: I spent a lot of time working with different tools to generate PDF files, mainly invoices and reports. Some of these documents were really sophisticated, including multi-page tables, colorful charts, headers and footers. I tried generating documents by hand and converting HTML to PDF, or even LaTeX to PDF.
 image: /assets/generating_pdf_files.jpg
@@ -63,11 +63,11 @@ To give you some idea of what to expect from above libraries, I compiled **a com
   </figure>
   <figure class="image">
     <img src="/assets/invoice-mpdf.png" width="370" height="480" alt="Invoice rendered by mpdf">
-    <figcaption>mPDF 8.0.13</figcaption>
+    <figcaption>mPDF 8.0.15</figcaption>
   </figure>
   <figure class="image">
     <img src="/assets/invoice-dompdf.png" width="370" height="480" alt="Invoice rendered by Dompdf">
-    <figcaption>Dompdf 1.0.2</figcaption>
+    <figcaption>Dompdf 1.1.1</figcaption>
   </figure>
 </div>
 
@@ -90,7 +90,7 @@ Two other tools I discovered are [WeasyPrint](https://weasyprint.org/) and [Prin
   </figure>
   <figure class="image">
     <img src="/assets/invoice-weasyprint.png" width="370" height="480" alt="Invoice rendered by WeasyPrint">
-    <figcaption>WeasyPrint 53.3</figcaption>
+    <figcaption>WeasyPrint 53.4</figcaption>
   </figure>
   <figure class="image">
     <img src="/assets/invoice-prince.png" width="370" height="480" alt="Invoice rendered by Prince">
