@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Secure generation of random IDs and passwords"
+title:  "Secure generation of random IDs and passwords in Java"
 date:   2021-01-10 17:00:00 +0100
 description: "Tools which provide safe, unpredictable random numbers and strings in your Java application: SecureRandom, Apache Commons and Passay."
 permalink: /secure-generation-of-random-ids-and-passwords/
