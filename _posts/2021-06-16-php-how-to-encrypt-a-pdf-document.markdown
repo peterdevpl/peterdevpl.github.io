@@ -94,7 +94,7 @@ Also, Dompdf supports only basic four permissions from an older PDF standard.
 
 [The FPDF library](http://www.fpdf.org/) does not have built-in encryption, but there's a separate [code snippet to implement 40-bit RC4.](http://www.fpdf.org/en/script/script37.php)
 
-Setasign, the company behind FPDF, offers a [commercial library that supports encryption up to 256-bit AES.](https://www.setasign.com/products/setapdf-core/details)
+Setasign offers a [commercial library that supports encryption up to 256-bit AES.](https://www.setasign.com/products/setapdf-core/details)
 
 ## Encrypting an existing file with command line tools
 
