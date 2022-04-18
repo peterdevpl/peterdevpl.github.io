@@ -23,7 +23,7 @@ Scrum is often depicted as such a magic wand, but a struggle to adopt it may bec
 
 Leading people is a lot more than telling them what to do. Building an organization's culture is a lot more than setting up Jira.
 
-Although Scrum is a "lightweight framework", it still imposes rules that some organizations will be unable to adhere to:
+Although Scrum is a ["lightweight framework"](https://scrumguides.org/index.html), it still imposes rules that some organizations will be unable to adhere to:
 1. We work in constant timeframes ("sprints") and try not to interrupt that work.
 2. We have meetings (daily, review, planning, retro) in constant time and place.
 
@@ -59,7 +59,7 @@ If your team aims only at the highest line coverage possible, it might:
 * give you a false sense of safety while in fact, the tests may pass serious bugs, and
 * encourage people to write phony assertions just to boost the overall metric.
 
-A great tool to measure quality of tests is *mutational testing.* Programs like InfectionPHP generate different versions of your production code, for example by altering conditions, removing lines, and so on. If tests do not fail despite these changes, it means they don't catch enough bugs (mutants). Usually these problems get fixed by writing more precise test cases.
+A great tool to measure quality of tests is *mutational testing.* Programs like [PITest](https://pitest.org/) or [InfectionPHP](https://infection.github.io/) generate different versions of your production code, for example by altering conditions, removing lines, and so on. If tests do not fail despite these changes, it means they don't catch enough bugs (mutants). Usually these problems get fixed by writing more precise test cases.
 
 ## Rewrite is necessary
 
@@ -67,11 +67,11 @@ Developers love greenfield projects because they treat them as playgrounds to tr
 
 While maintaining an old and messy project, there's usually a temptation to rewrite it from scratch. "This time we'll do it better," everyone thinks. This is rarely the truth.
 
-Apart from obvious technical circumstances, like Adobe Flash being retired, a rewrite causes more harm than good. Martin Fowler in his book "Refactoring" tells a story of a software project gone down because of a fatal attempt to rewrite everything. The project was late, over budget and didn't work properly.
+Apart from obvious technical circumstances, like [Adobe Flash being retired](https://www.adobe.com/products/flashplayer/end-of-life.html), a rewrite causes more harm than good. Martin Fowler in his book ["Refactoring"](https://martinfowler.com/books/refactoring.html) tells a story of a software project gone down because of a fatal attempt to rewrite everything. The project was late, over budget and didn't work properly.
 
 My first action when dealing with a legacy project is to write proper tests, which are often missing. I want to understand the system's behavior, including all hidden behaviors and side effects. With a good set of unit, integration, API and E2E tests I can proceed to refactor the most annoying parts of the system. Tests make me confident that I don't break any of the existing behaviors that users actually rely on.
 
-There are other efficient strategies to deal with legacy systems that do not involve a major rewrite: Strangler Pattern, Anti-Corruption Layer, Facade. All of them assume that you start building new modules step by step, but still route traffic to the old code. When a new module is ready, you just switch traffic.
+There are other efficient strategies to deal with legacy systems that do not involve a major rewrite: [Strangler Pattern](https://martinfowler.com/bliki/StranglerFigApplication.html), [Anti-Corruption Layer](https://deviq.com/domain-driven-design/anti-corruption-layer), Facade. All of them assume that you start building new modules step by step, but still route traffic to the old code. When a new module is ready, you just switch traffic.
 
 Instead of conducting a costly rewrite that takes months to complete, it's better to improve the project step by step and have a tight feedback loop. You can release a small fix every week and see if it's working properly and how it contributes to the overall project quality.
 
@@ -85,9 +85,9 @@ The urge to complicate software design is caused by:
 * **The fear of legacy code.** Developers traumatized by old, messy codebases are trying to avoid them so hard by using fancy design patterns that they're actually making a new mess that only looks clever on the outside.
 * **The fear of change.** Developers notoriously ask this question: "What if business requests a change?". This often goes in pair with the business imposing strict deadlines. Developers try to anticipate these requests by building a "flexible" system, but the development delays because of all the crazy tricks in the code.
 
-I have two principles that help me overcome those fears: Just In Time and Keep It Simple, Stupid. I don't have to build an empire on day one. Let's start simple.
+I have two principles that help me overcome those fears: [Just In Time](https://en.wikipedia.org/wiki/Lean_manufacturing) and [Keep It Simple, Stupid](https://en.wikipedia.org/wiki/KISS_principle). I don't have to build an empire on day one. Let's start simple.
 
-There has to be a balance. Not every project requires Domain-Driven Design, or CQRS. Not every project requires an ORM. Not every project requires a ton of interfaces, abstractions, layers, providers, resolvers, adapters, or whatever fancy design pattern you love.
+There has to be a balance. Not every project requires [CQRS](https://martinfowler.com/bliki/CQRS.html). Not every project requires an [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping). Not every project requires a ton of interfaces, abstractions, layers, providers, resolvers, adapters, or whatever fancy design pattern you love.
 
 When I'm forced by business people to deliver working software fast, I always tell them: okay, I can cut corners, but the future changes will take more time. I warn them, and it's fine. Business sometimes wants just to validate an idea, or quickly solve an issue. If you're patient enough, they will eventually understand the technical consequences.
 
@@ -105,7 +105,7 @@ You can save yourself from trouble and make updates easier by implementing integ
 
 ## Must follow all the trends
 
-The so-called "Hype-Driven Development" (or ironically, "Resume-Driven Development") has many victims. There can be a strong neophyte effect after reading a popular book or attending a tech conference. People think that their workplace can be improved only by applying all the recent discoveries.
+The so-called ["Hype-Driven Development"](https://blog.daftcode.pl/hype-driven-development-3469fc2e9b22) (or ironically, "Resume-Driven Development") has many victims. There can be a strong neophyte effect after reading a popular book or attending a tech conference. People think that their workplace can be improved only by applying all the recent discoveries.
 
 Somewhere between 2015 and 2018, there was a huge hype on microservices. Conference speakers claimed that we should split old monoliths into flexible microservices, just because Netflix does this. They didn't warn about all the additional problems caused by the new approach: performance, stability, data separation, and so on. Several years later there were voices saying that *microservices are not for everyone* and you should consider a *modular monolith.*
 
@@ -124,7 +124,7 @@ If you feel overwhelmed by meetings, possible solutions include:
 2. Putting all the meetings (like Scrum ceremonies) in one day. This works really well for my team.
 3. Adding "Focus time" or similar items in your calendar, so that other people know you're busy. You have a right to go offline from time to time!
 4. Picking a moderator for every meeting. That person is responsible for making sure a meeting is effective and comfortable. It can be a Scrum Master, but doesn't have to.
-5. Utilizing every tool possible to make communication better: webcams, Miro, Notion, G-Suite. Instead of just talking, make everyone collaborate on a document, diagram, drawing.
+5. Utilizing every tool possible to make communication better: webcams, [Miro](https://miro.com/), [Notion](https://www.notion.so/), [Google Workspace](https://workspace.google.com/). Instead of just talking, make everyone collaborate on a document, diagram, drawing.
 
 ## Business doesn't understand us
 
