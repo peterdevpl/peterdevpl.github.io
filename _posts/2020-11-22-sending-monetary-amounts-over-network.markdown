@@ -82,3 +82,5 @@ When exchanging financial data with other systems, always make sure to:
 3. **Specify currency** using the ISO 4217 standard.
 4. **Respect the encoding rules** of the data format you’re using.
 5. **Parse localized money strings** properly.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OhFzgdy_MVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

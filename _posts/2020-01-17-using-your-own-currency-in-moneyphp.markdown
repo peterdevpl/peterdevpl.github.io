@@ -62,3 +62,5 @@ echo $moneyFormatter->format($theirCardAmount);  // The 62.00
 The odd output (`The` instead of `Their` and the unwanted fractional part) comes from the fact that [PHP’s NumberFormatter](https://www.php.net/manual/en/numberformatter.formatcurrency.php) handles only ISO currencies which have 3-character symbols. So you should use `\NumberFormatter::DECIMAL` instead and add your custom symbol manualy.
 
 [See my post about handling money in PHP](/2018/08/24/learn-how-to-count-money-or-you-will-lose-it/)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OhFzgdy_MVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

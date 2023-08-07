@@ -202,4 +202,4 @@ Decimal calculations need extra care. Computers do not support decimal numbers n
 
 Accuracy is especially important for monetary calculations. I recommend using the [Java Money library](https://javamoney.github.io/) as it also introduces handling currencies. However, knowing the `BigDecimal` class can still be useful.
 
-*This is a part of the book I’m writing – “Money explained to Java developers”. If you’re interested, [follow me on Twitter](https://twitter.com/peterdevpl) for more insights!*
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OhFzgdy_MVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

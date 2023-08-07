@@ -29,3 +29,5 @@ You can play with converting different numbers here: [IEEE-754 Floating Point Co
 How to operate with currencies in PHP? The best way is to use [decimal types](http://php.net/manual/en/ref.bc.php) or [dedicated currency classes](http://moneyphp.org/en/latest/). `Money` is a classic example of a value object as a Domain-Driven Design building block.
 
 > If I had a dime for every time I’ve seen someone use FLOAT to store currency, I’d have $999.997634 – Bill Karwin
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OhFzgdy_MVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
