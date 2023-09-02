@@ -177,3 +177,5 @@ Check out [this StackOverflow thread to see more ideas on how to convert a PDF f
 
 * [Picking a PHP tool to generate PDFs (2021 update)]({% post_url 2019-01-11-picking-a-php-tool-to-generate-pdfs %})
 * [Picking a PHP tool to read and manipulate PDF files]({% post_url 2019-01-25-picking-a-php-tool-to-read-and-manipulate-pdf-files %})
+
+{% include book.html %}

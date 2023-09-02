@@ -36,3 +36,5 @@ In Poland, we have electronic train tickets that can be downloaded on a smartpho
 ## Further reading
 
 [Will PDF files become obsolete in 5-10 years?](https://www.quora.com/Will-PDF-files-become-obsolete-in-5%E2%80%9310-years)
+
+{% include book.html %}

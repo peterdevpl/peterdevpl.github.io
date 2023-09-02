@@ -111,3 +111,5 @@ To use AES, you need to pick a commercial tool, for example [Coherent PDF.](http
 ## Summary
 
 Document encryption is a good way to protect the document contents from being accessed by an unauthorized person. Banking documents are often sent via email and they could be stolen from a person's account. With strong encryption, it's not possible to read them.
+
+{% include book.html %}

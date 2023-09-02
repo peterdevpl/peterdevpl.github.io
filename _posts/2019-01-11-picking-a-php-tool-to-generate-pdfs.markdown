@@ -124,3 +124,5 @@ Please also remember that many tools are developed by the Open Source community 
 
 * [Picking a PHP tool to read and manipulate PDF files]({% post_url 2019-01-25-picking-a-php-tool-to-read-and-manipulate-pdf-files %})
 * [PHP: How to take a screenshot of a PDF page]({% post_url 2021-01-28-php-how-to-take-a-screenshot-of-a-pdf-page %})
+
+{% include book.html %}

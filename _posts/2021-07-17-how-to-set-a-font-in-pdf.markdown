@@ -244,3 +244,5 @@ The mysterious number 32 which appears both in the command line call and the `ad
 | 131,072              | small caps                      |
 
 > TCPDF does not support OpenType nor WOFF2 fonts.
+
+{% include book.html %}

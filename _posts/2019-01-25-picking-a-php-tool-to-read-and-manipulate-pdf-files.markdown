@@ -95,3 +95,5 @@ Check out the [List of PDF software](https://en.wikipedia.org/wiki/List_of_PDF_s
 
 * [Picking a PHP tool to generate PDFs (2021 update)]({% post_url 2019-01-11-picking-a-php-tool-to-generate-pdfs %})
 * [PHP: How to take a screenshot of a PDF page]({% post_url 2021-01-28-php-how-to-take-a-screenshot-of-a-pdf-page %})
+
+{% include book.html %}
