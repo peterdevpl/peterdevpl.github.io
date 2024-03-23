@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Picking a PHP tool to generate PDFs (2023 update)"
+title:  "Picking a PHP tool to generate PDFs (2024 update)"
 date:   2019-01-11 17:00:00 +0100
-last_modified_at: 2023-01-11 23:00:00 +0200
+last_modified_at: 2024-03-23 20:00:00 +0100
 description: "Comparison of HTML to PDF conversion tools: mPDF, TCPDF, Dompdf, typeset.sh, wkhtmltopdf, Headless Chrome, WeasyPrint and Prince."
 excerpt: I spent a lot of time working with different tools to generate PDF files, mainly invoices and reports. Some of these documents were really sophisticated, including multi-page tables, colorful charts, headers and footers. I tried generating documents by hand and converting HTML to PDF, or even LaTeX to PDF.
 image: /assets/generating_pdf_files.jpg
@@ -59,15 +59,15 @@ To give you some idea of what to expect from above libraries, I compiled **a com
   </figure>
   <figure class="image">
     <img src="/assets/invoice-tcpdf.png" width="370" height="480" alt="Invoice rendered by TCPDF">
-    <figcaption>TCPDF 6.6.2</figcaption>
+    <figcaption>TCPDF 6.7.4</figcaption>
   </figure>
   <figure class="image">
     <img src="/assets/invoice-mpdf.png" width="370" height="480" alt="Invoice rendered by mpdf">
-    <figcaption>mPDF 8.1.4</figcaption>
+    <figcaption>mPDF 8.2.3</figcaption>
   </figure>
   <figure class="image">
     <img src="/assets/invoice-dompdf.png" width="370" height="480" alt="Invoice rendered by Dompdf">
-    <figcaption>Dompdf 2.0.1</figcaption>
+    <figcaption>Dompdf 2.0.4</figcaption>
   </figure>
 </div>
 
@@ -90,11 +90,11 @@ Two other tools I discovered are [WeasyPrint](https://weasyprint.org/) and [Prin
   </figure>
   <figure class="image">
     <img src="/assets/invoice-weasyprint.png" width="370" height="480" alt="Invoice rendered by WeasyPrint">
-    <figcaption>WeasyPrint 57.2</figcaption>
+    <figcaption>WeasyPrint 61</figcaption>
   </figure>
   <figure class="image">
     <img src="/assets/invoice-prince.png" width="370" height="480" alt="Invoice rendered by Prince">
-    <figcaption>Prince 14.2</figcaption>
+    <figcaption>Prince 15.3</figcaption>
   </figure>
   <figure class="image">
     <img src="/assets/invoice-wkhtml.png" width="370" height="480" alt="Invoice rendered by wkhtmltopdf">
